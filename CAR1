@@ -1,0 +1,68 @@
+using System;
+namespace CarApplication
+{
+	class Car
+	{
+		public int LicencePlate;
+		public int EnginePower;
+		public int MaximalSpeed;
+		public string Colour;
+		public string Type;
+	}
+	class Cartester
+	{
+		static void Main(string[] args)
+		{
+			Car Car1 = new Car();
+			Car Car2 = new Car();
+			
+			Car1.LicencePlate = 123456;
+			Car1.EnginePower = 147;
+			Car1.MaximalSpeed = 200;
+			Car1.Colour = "green";
+			Car1.Type = "personal vehicle";
+			
+			Car2.LicencePlate = 654321;
+			Car2.EnginePower = 150;
+			Car2.MaximalSpeed = 195;
+			Car2.Colour = "blue";
+			Car2.Type = "personal vehicle";
+			
+			Console.WriteLine("Car1's Licence Plate: NF{0}",Car1.LicencePlate);
+			Console.WriteLine("Car1's EnginePower: {0}kW",Car1.EnginePower);
+			Console.WriteLine("Car1's MaximalSpeed: {0}km/h",Car1.MaximalSpeed);
+			Console.WriteLine("Car1's Colour: {0}",Car1.Colour);
+			Console.WriteLine("Car1's Type: {0}\n",Car1.Type);
+			
+			Console.WriteLine("Car2's Licence Plate is NF{0}",Car2.LicencePlate);
+			Console.WriteLine("Car2's EnginePower:{0}kW",Car2.EnginePower);
+			Console.WriteLine("Car2's MaximalSpeed: {0}km/h",Car2.MaximalSpeed);
+			Console.WriteLine("Car2's Colour: {0}",Car2.Colour);
+			Console.WriteLine("Car2's Type: {0}\n",Car2.Type);
+			
+			if(Car1.LicencePlate == Car2.LicencePlate)
+			{
+				if(Car1.EnginePower == Car2.EnginePower)
+				{
+					if(Car1.MaximalSpeed == Car2.MaximalSpeed)
+					{
+						if(Car1.Colour == Car2.Colour)
+						{
+							if(Car1.Type == Car2.Type)
+							{
+				Console.WriteLine("This is the same vehicle.");
+							}
+						}
+					}
+				}
+			}
+			else
+			{
+				Console.WriteLine("This is not the same vehicle.");
+			}
+			
+			Console.ReadKey();
+		}
+	}
+
+}
